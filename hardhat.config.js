@@ -8,7 +8,10 @@ module.exports = {
   networks: {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${process.env.INFURA_PROJECT_ID1}`,
-      accounts: [process.env.DEPLOYER_PRIVAE_KEY1],
+      accounts: [
+        process.env.DEPLOYER_PRIVAE_KEY1,
+        process.env.DEPLOYER_PRIVAE_KEY2,
+      ],
       chainId: 4,
       // gas: 6700000,
       // gasPrice: 10000000000,

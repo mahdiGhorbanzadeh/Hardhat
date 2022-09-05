@@ -5,7 +5,7 @@ const { ethers, upgrades } = require("hardhat");
 async function main() {
   const Test = await hre.ethers.getContractFactory("Test");
 
-  console.log("Deploying Tree...");
+  console.log("Deploying Test...");
 
   const test = await upgrades.deployProxy(Test, {
     initializer: "initialize",
