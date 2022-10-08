@@ -3,7 +3,7 @@ const hre = require("hardhat");
 const { ethers, upgrades } = require("hardhat");
 
 async function main() {
-  const TestUUPS = await hre.ethers.getContractFactory("TestUUPS");
+  const TestUUPS = await hre.ethers.getContractFactory("TestDis");
 
   console.log("Deploying TestUUPS...");
 

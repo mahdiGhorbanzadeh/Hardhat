@@ -3,17 +3,13 @@ const hre = require("hardhat");
 const { ethers, upgrades } = require("hardhat");
 
 async function main() {
-  const TestUUPSupgrade = await hre.ethers.getContractFactory(
-    "TestUUPSupgrade",
-  );
+  const TestUUPSupgrade = await hre.ethers.getContractFactory("TestDis");
 
   let testUUPS = await TestUUPSupgrade.attach(
-    "0x7F9445028cf11F8A49aF6a1838d199727bf17262",
+    "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
   );
 
-  console.log(await testUUPS.owner());
-
-  console.log(await testUUPS.upgradeFunc());
+  console.log(await testUUPS.var2());
 }
 
 main().catch((error) => {
